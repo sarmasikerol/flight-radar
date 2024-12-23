@@ -6,6 +6,7 @@ import List from "./pages/List";
 import Buttons from "./components/Buttons";
 import { useDispatch } from "react-redux";
 import { getFlights } from "./redux/actions";
+import Modal from "./components/Modal";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const App = () => {
         <Route path="/list" element={<List />} />
       </Routes>
 
-      {detailId && <h1>MODAL</h1>}
+      {detailId && <Modal id={detailId} close={() => setDetailId(null)} />}
     </BrowserRouter>
   );
 };

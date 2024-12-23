@@ -24,3 +24,10 @@ export const getFlights = createAsyncThunk("flight/getFlights", async () => {
   // aksiyonunn payload ı
   return formatted;
 });
+
+export const getInfo = createAsyncThunk("info/getInfo", async (id) => {
+  const res = await api.get(`/flights/detail/?flight=${id}`);
+
+  // aksiyonun payload'ını return et
+  return res.data;
+});
