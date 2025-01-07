@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/list" element={<List />} />
       </Routes>
 
-      {detailId && <Modal id={detailId} close={() => setDetailId(null)} />}
+      {detailId && <Modal id={detailId} close={() => setDetailId(null)}/>}
     </BrowserRouter>
   );
 };
